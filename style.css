@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+#containerApp {
+  height: 100vh;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+#containerApp .row {
+  height: 100%;
+}
+
+#guidePopup {
+  position: absolute;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(6px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s opacity;
+}
+
+#guidePopup.guideOff {
+  opacity: 0;
+}
+
+.inputs {
+  margin-bottom: 15px;
+}
+
+.buttons-map {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.356);
+  transition: 0.3s all;
+}
+
+.buttons-map:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#tab-button {
+  right: 20px;
+  top: 10px;
+  text-align: center;
+}
+
+#tab-button i {
+  font-size: 2.5em;
+  color: #00aeef;
+}
+
+#home-button {
+  right: 20px;
+  top: 90px;
+  text-align: center;
+}
+
+#home-button i {
+  font-size: 1.5em;
+  top: 20%;
+  position: relative;
+  color: #00aeef;
+}
+
+#todoTab {
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+  height: 100%;
+  padding: 50px 20px;
+  position: absolute;
+  z-index: 1000;
+  left: -100%;
+  transition: 0.5s left;
+}
+
+#todoTab.tab-active {
+  left: 0;
+}
+
+#todoTab form {
+  color: rgb(19, 19, 19);
+}
+
+.divCheck {
+  padding: 4px 5px;
+  border-radius: 5px;
+  transition: 0.2s all;
+  margin-top: 5px;
+  display: flex;
+  justify-content: stretch;
+}
+
+.divCheck:hover {
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.274);
+  cursor: pointer;
+}
+
+.divCheck label {
+  margin-left: 5px;
+}
+
+.inputCheck {
+  padding: 10px;
+}
+
+.inputCheck:hover {
+  cursor: pointer;
+}
+
+.inputCheck:checked + label {
+  text-decoration: line-through;
+}
+
+.checkClose {
+  color: rgba(255, 82, 82, 0.548);
+  background-color: rgb(243, 243, 243);
+  opacity: 0;
+  transition: 0.3s all;
+  position: relative;
+  right: -25%;
+}
+
+.checkClose:hover {
+  cursor: default;
+  opacity: 0.2;
+  color: rgb(255, 65, 65);
+}
+
+.divCheck:hover .checkClose {
+  opacity: 1;
+}
