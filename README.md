@@ -1,4 +1,4 @@
-#To-do Map Project
+# To-do Map Project
 
 Personal project where I was able to test some javascript concepts, such as APIs, object oriented programming and much more.
 
